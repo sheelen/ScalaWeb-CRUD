@@ -6,11 +6,15 @@ import play.api.mvc._
 class CarAdvertsController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   def index = Action {
-    Ok("It works!")
+    Ok(views.html.CarAdverts.index("success"))
+  }
+
+  def addAdvertPage()= Action {
+    Ok(views.html.CarAdverts.newAdvert("success"))
   }
 
   def getAdverts = Action {
-    Ok("getAllAdverts")
+    Ok(views.html.CarAdverts.viewAdverts("success"))
   }
 
   //fetch one record from carAdvert
