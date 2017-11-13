@@ -3,11 +3,24 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET        /                        controllers.HomeController.index
 # An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
+GET        /count                   controllers.CountController.count
 # An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
+GET        /message                 controllers.AsyncController.message
+
+
+# gets all car adverts
+GET        /carAdverts              controllers.CarAdvertsController.getAdverts
+# adds a new car advert
+POST       /carAdverts/add          controllers.CarAdvertsController.create
+# edit existing car advert
+PUT        /carAdverts/edit/:id     controllers.CarAdvertsController.modify(id:Integer)
+# delete single advert
+DELETE     /carAdverts/delete/:id   controllers.CarAdvertsController.remove(id:Integer)
+# fetch a single car advert by Id
+GET        /carAdverts/:id          controllers.CarAdvertsController.fetch(id:Integer)
+
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET        /assets/*file            controllers.Assets.versioned(path="/public", file: Asset)
