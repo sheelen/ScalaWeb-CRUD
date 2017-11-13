@@ -1,21 +1,21 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
 @(message: String)
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play") {
-
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @*welcome(message, style = "scala")*@
-    <h1>heheheh</h1>
-
+@main("ScalaWeb-CRUD") {
+    <div class ="customContainer">
+        <div class="col-md-12 col">
+            <hr>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <a href="@routes.CarAdvertsController.addAdvertPage()" class="btn btn-success btn-lg btn-block btn-huge">Add Adverts</a>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <a href="@routes.CarAdvertsController.getAdverts()" class="btn btn-info btn-lg btn-block btn-huge">View Adverts</a>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
 }
