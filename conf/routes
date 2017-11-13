@@ -3,7 +3,7 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET        /                        controllers.HomeController.index
+GET        /                        controllers.CarAdvertsController.index
 # An example controller showing how to use dependency injection
 GET        /count                   controllers.CountController.count
 # An example controller showing how to write asynchronous code
@@ -13,9 +13,9 @@ GET        /message                 controllers.AsyncController.message
 # gets all car adverts
 GET        /carAdverts              controllers.CarAdvertsController.getAdverts
 # adds a new car advert
-POST       /carAdverts/add          controllers.CarAdvertsController.create
+GET        /carAdverts/add          controllers.CarAdvertsController.addAdvertPage
 # edit existing car advert
-PUT        /carAdverts/edit/:id     controllers.CarAdvertsController.modify(id:Integer)
+POST       /carAdverts/edit/:id     controllers.CarAdvertsController.modify(id:Integer)
 # delete single advert
 DELETE     /carAdverts/delete/:id   controllers.CarAdvertsController.remove(id:Integer)
 # fetch a single car advert by Id
